@@ -4,14 +4,14 @@ import { NavLink } from "react-router-dom";
 const Membership = () => {
     // Fotoğraf URL'leri (7 adet)
     const images = [
-        "../src/assets/right-1.png",
-        "../src/assets/right-2.png",
-        "../src/assets/right-3.png",
-        "../src/assets/right-4.png",
-        "../src/assets/right-5.png",
-        "../src/assets/right-6.png",
-        "../src/assets/right-7.png",
-        "../src/assets/right-8.png",
+        "/assets/right-1.png",
+        "/assets/right-2.png",
+        "/assets/right-3.png",
+        "/assets/right-4.png",
+        "/assets/right-5.png",
+        "/assets/right-6.png",
+        "/assets/right-7.png",
+        "/assets/right-8.png",
 
     ];
 
