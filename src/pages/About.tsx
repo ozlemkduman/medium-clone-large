@@ -1,7 +1,11 @@
-
+import ModalSignin from '../components/ModalSignin';
+import { useMainContext } from '../contextApi/MainContext';
 const About = () => {
+    const { isModalSigninOpen, setIsModalSigninOpen } = useMainContext();
+
     return (
         <>
+            <ModalSignin isOpen={isModalSigninOpen} onClose={() => setIsModalSigninOpen(false)} />
             <div className="flex flex-col w-full h-min-screen items-start bg-[#242424] text-[#FFFFFF] font-[cambria,georgia] pt-30 pb-30 px-12 ">
                 <div className="font-[cambria] text-[85px] w-1/3 text-left text-[400] tracking-[-4px]">Everyone has a story to tell</div>
                 <div className="font-[cambria] text-[21px]/[32px] w-[40%] text-left font-light mt-20 tracking-[-0.003em]">Medium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without having to build a mailing list or a following first. The internet is noisy and chaotic; Medium is quiet yet full of insight. It’s simple, beautiful, collaborative, and helps you find the right readers for whatever you have to say.</div>
@@ -13,10 +17,10 @@ const About = () => {
                 <div className="font-[cambria] w-[45%] text-left text-[21px]/[32px] font-[400]">Instead of selling ads or selling your data, we’re supported by a growing community of over a million Medium members who believe in our mission. If you’re new here, start reading. Dive deeper into whatever matters to you. Find a post that helps you learn something new, or reconsider something familiar—and then write your story.</div>
             </div>
             <div className="w-full bg-[#242424] text-white font-[cambria] ">
-                    <div className=" w-full border-t-1 border-[#B3B3B3] text-[70px] py-10 text-left ps-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Start reading <span></span></div>
-                    <div className=" w-full border-t-1 border-[#B3B3B3] text-[70px] py-10 text-left ps-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Start writing <span></span></div>
-                    <div className=" w-full border-t-1 border-[#B3B3B3] text-[70px] py-10 text-left ps-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Become a member <span></span></div>
-                </div>
+                <div className=" w-full border-t-1 border-[#B3B3B3] text-[70px] py-10 text-left ps-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Start reading <span></span></div>
+                <div className=" w-full border-t-1 border-[#B3B3B3] text-[70px] py-10 text-left ps-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Start writing <span></span></div>
+                <div className=" w-full border-t-1 border-[#B3B3B3] text-[70px] py-10 text-left ps-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Become a member <span></span></div>
+            </div>
         </>
     )
 }

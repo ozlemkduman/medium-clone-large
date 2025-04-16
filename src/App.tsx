@@ -6,6 +6,7 @@ import SiteRoutes from './SiteRoutes'
 function App() {
 
   return (
+    
     <div className='w-screen h-screen  '>
       <Navbar />
       <SiteRoutes/>

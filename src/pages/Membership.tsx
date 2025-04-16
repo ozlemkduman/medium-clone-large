@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import ModalSignin from '../components/ModalSignin';
+import { useMainContext } from '../contextApi/MainContext';
 
 const Membership = () => {
+    const { isModalSigninOpen, setIsModalSigninOpen } = useMainContext();
+
     // Fotoğraf URL'leri (7 adet)
     const images = [
         "/assets/right-1.png",
@@ -95,6 +99,7 @@ const Membership = () => {
 
     return (
         <>
+            <ModalSignin isOpen={isModalSigninOpen} onClose={() => setIsModalSigninOpen(false)} />
             <div className="w-full min-h-screen pt-20 " >
                 <div className="w-full flex h-[650px] border-b ">
                     <div className={`w-[69%] text-left ps-8 pt-18 border-e `} style={{ backgroundColor: bgColorLight }}>

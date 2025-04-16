@@ -4,8 +4,8 @@ import { useMainContext } from "../contextApi/MainContext"
 const Navbar = () => {
 
     const { location } = useMainContext()
+    const { setIsModalSigninOpen,setIsModalSignupOpen } = useMainContext();
 
-    console.log(location);
 
     return (
         <>
@@ -17,10 +17,9 @@ const Navbar = () => {
                             <div className="cursor-pointer"><NavLink to="/about">Our story</NavLink></div>
                             <div className="cursor-pointer"><NavLink to="/membership">Membership</NavLink></div>
                             <div className="cursor-pointer"><NavLink to="/write">Write</NavLink></div>
-                            <div className="cursor-pointer"><NavLink to="/signin">Sign In</NavLink></div>
-                            <div ><NavLink to="/getStarted">
+                            <div onClick={()=>setIsModalSigninOpen(true)} className="cursor-pointer">Sign In</div>
+                            <div onClick={()=>setIsModalSignupOpen(true)} >
                                 <button className="bg-black rounded-3xl text-white px-4 py-3 cursor-pointer">Get started</button>
-                            </NavLink>
                             </div>
                         </div>
                     </div>
@@ -30,15 +29,11 @@ const Navbar = () => {
                         <div className="flex justify-between w-1/1  ">
                             <div className="font-[georgia] text-4xl tracking-tight font-normal cursor-pointer text-[#FFFFFF]"><NavLink to="/">Large</NavLink></div>
                             <div className="menu font-sans flex gap-6 items-center font-light text-sm ">
-                                <div >
-                                    <NavLink to="/signin">
+                                <div onClick={()=>setIsModalSigninOpen(true)}>
                                         <button className="bg-[#242424] border-1 border-[#EAEAEA] rounded-3xl text-white px-4 py-3 cursor-pointer">Sign in</button>
-                                    </NavLink>
                                 </div>
-                                <div >
-                                    <NavLink to="/signup">
+                                <div onClick={()=>setIsModalSignupOpen(true)}>
                                         <button className="bg-[#EAEAEA] rounded-3xl text-black px-4 py-3 cursor-pointer">Sign up</button>
-                                    </NavLink>
                                 </div>
                             </div>
                         </div>
@@ -48,15 +43,11 @@ const Navbar = () => {
                             <div className="flex  justify-between ">
                                 <div className="font-[georgia] text-4xl tracking-tight font-normal cursor-pointer"><NavLink to="/">Large</NavLink></div>
                                 <div className="menu font-sans flex gap-4 items-center font-light text-sm ">
-                                    <div className="cursor-pointer">
-                                        <NavLink to="/getStarted">
-                                        <button className="bg-[#FFFFFF] border-1 border-[#242424]  rounded-3xl text-black px-3.5 py-2.5 cursor-pointer">Sign up</button>
-                                        </NavLink>
+                                    <div onClick={()=>setIsModalSigninOpen(true)} className="cursor-pointer">
+                                        <button className="bg-[#FFFFFF] border-1 border-[#242424]  rounded-3xl text-black px-3.5 py-2.5 cursor-pointer">Sign in</button>
                                     </div>
-                                    <div className="cursor-pointer">
-                                        <NavLink to="/getStarted">
-                                        <button className="bg-[#242424] border-white rounded-3xl text-white px-3.5 py-2.5 ">Sign in</button>
-                                        </NavLink>
+                                    <div onClick={()=>setIsModalSignupOpen(true)} className="cursor-pointer">
+                                        <button className="bg-[#242424] border-white rounded-3xl text-white px-3.5 py-2.5 ">Sign up</button>
                                     </div>
                                 </div>
                             </div>
@@ -64,17 +55,13 @@ const Navbar = () => {
                         :
                         <nav className="flex justify-between w-9/12 ">
                             <div className=" ">
-                                <div className="font-[georgia] text-4xl tracking-tight h-20  font-normal cursor-pointer">Large</div>
+                                <div className="font-[georgia] text-4xl tracking-tight h-20  font-normal cursor-pointer"><NavLink to="/">Large</NavLink></div>
                                 <div className="menu font-sans flex gap-6 items-center font-light text-sm ">
-                                    <div className="cursor-pointer">
-                                        <NavLink to="/getStarted">
+                                    <div onClick={()=>setIsModalSigninOpen(true)} className="cursor-pointer">
                                             <button className="bg-[#242424] border-white rounded-3xl text-white px-4 py-3 ">Sign in</button>
-                                        </NavLink>
                                     </div>
-                                    <div className="cursor-pointer">
-                                        <NavLink to="/getStarted">
+                                    <div onClick={()=>setIsModalSignupOpen(true)} className="cursor-pointer">
                                             <button className="bg-[#FFFFFF] border-1 border-[#242424]  rounded-3xl text-black px-4 py-3 cursor-pointer">Sign up</button>
-                                        </NavLink>
                                     </div>
                                 </div>
                             </div>

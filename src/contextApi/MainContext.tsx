@@ -4,19 +4,28 @@ import { useLocation } from "react-router-dom";
 // Tip tanımı — şimdilik location ve örnek bir global state ekledik
 type MainContextType = {
   location: ReturnType<typeof useLocation>;
-  user: string;
-  setUser: (value: string) => void;
-};
+  isModalSigninOpen: boolean;
+  isModalSignupOpen: boolean;
+
+  setIsModalSigninOpen: (value: boolean) => void;
+  setIsModalSignupOpen: (value: boolean) => void;
+
+ };
 
 const MainContextAll = createContext<MainContextType | undefined>(undefined);
 
 // Provider bileşeni
 export const MainContextProvider = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
-  const [user, setUser] = useState("Guest");
+
+  const [isModalSigninOpen, setIsModalSigninOpen] = useState(false);
+  const [isModalSignupOpen, setIsModalSignupOpen] = useState(false);
+
+
+  
 
   return (
-    <MainContextAll.Provider value={{ location, user, setUser }}>
+    <MainContextAll.Provider value={{ location,isModalSigninOpen,setIsModalSigninOpen,isModalSignupOpen,setIsModalSignupOpen }}>
       {children}
     </MainContextAll.Provider>
   );
@@ -30,3 +39,4 @@ export const useMainContext = () => {
   }
   return context;
 };
+
