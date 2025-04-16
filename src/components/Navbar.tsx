@@ -16,7 +16,7 @@ const Navbar = () => {
                         <div className="menu font-sans flex gap-6 items-center font-light text-sm ">
                             <div className="cursor-pointer"><NavLink to="/about">Our story</NavLink></div>
                             <div className="cursor-pointer"><NavLink to="/membership">Membership</NavLink></div>
-                            <div className="cursor-pointer"><NavLink to="/write">Write</NavLink></div>
+                            <div onClick={()=>setIsModalSigninOpen(true)} className="cursor-pointer"><NavLink to="/write">Write</NavLink></div>
                             <div onClick={()=>setIsModalSigninOpen(true)} className="cursor-pointer">Sign In</div>
                             <div onClick={()=>setIsModalSignupOpen(true)} >
                                 <button className="bg-black rounded-3xl text-white px-4 py-3 cursor-pointer">Get started</button>
