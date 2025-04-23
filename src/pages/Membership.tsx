@@ -220,7 +220,7 @@ const Membership = () => {
                     </div>
                 </div>
                 <div className="flex  md:flex-row flex-col  w-full min-h-screen  z-10 bg-white  border-b pb-20">
-                    <div className="md:sticky top-10 md:w-2/6 h-fit pt-20 text-[48px] md:text-7xl font-[georgia] tracking-tight text-left ps-8 md:ps-10  z-10">
+                    <div className="md:sticky top-10 md:w-2/6 h-fit pt-20 text-[48px] md:text-7xl font-[georgia] tracking-tight text-left px-8 md:ps-10  z-10">
                         <p className="w-full ">What members are saying</p>
                     </div>
                     <div className="md:w-8/12 p-8 md:pt-22 pt-10 flex flex-col gap-10 md:gap-30 ">
