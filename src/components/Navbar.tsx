@@ -40,7 +40,7 @@ const Navbar = () => {
                         </div>
                     </nav>
                     : location.pathname == "/membership" ?
-                        <nav className="fixed z-20 top-0 left-0 border-b-1 bg-[#FFFFFF] h-20  w-full ps-6 md:pe-10  py-5">
+                        <nav className="fixed z-20 top-0 left-0 border-b-1 bg-[#FFFFFF] h-20  w-full px-6 md:pe-10  py-5">
                             <div className="flex  justify-between ">
                                 <div className="font-[georgia] text-4xl tracking-tight font-normal cursor-pointer"><NavLink to="/">Large</NavLink></div>
                                 <div className="menu font-sans flex gap-2 md:gap-4 items-center font-light text-sm ">
