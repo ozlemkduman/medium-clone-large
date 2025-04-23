@@ -28,7 +28,7 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                 onClick={onClose}
             ></div>
             {/* Modal içeriği */}
-            <div className="relative bg-white w-full h-full  md:w-2/5 md:h-4/5 p-8 md:rounded shadow-md/20  z-10">
+            <div className="relative bg-white w-full h-full  md:w-2/5 md:h-4/5 p-8  md:rounded shadow-md/20  z-10 ">
                 {/* Kapatma butonu */}
                 <button
                     className="absolute top-2 right-2 text-gray-600  cursor-pointer hover:text-black"
@@ -39,10 +39,10 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                         </path>
                     </svg>
                 </button>
-                <div className="flex flex-col items-center mt-15">
+                <div className="flex flex-col items-center mt-15 ">
                     <div className="flex flex-col items-center w-full">
                         <p className="text-3xl font-[cambria] py-5">Welcome back.                        </p>
-                        <div className="flex flex-col items-center w-full pt-15 gap-3">
+                        <div className="flex flex-col items-center w-full pt-10 gap-3">
                             <div className="w-5/6 md:w-2/4 border py-2.5 md:px-2 rounded-4xl relative">
                                 <a href="" className="flex justify-center items-center font-light " >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
