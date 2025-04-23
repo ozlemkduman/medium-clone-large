@@ -1,9 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import ModalSignin from '../components/ModalSignin';
 import ModalSignup from '../components/ModalSignup';
 import { useMainContext } from '../contextApi/MainContext';
 const About = () => {
     const { isModalSigninOpen, setIsModalSigninOpen,isModalSignupOpen,setIsModalSignupOpen} = useMainContext();
-
+    const navigate = useNavigate()
     return (
         <>
             <ModalSignin isOpen={isModalSigninOpen} onClose={() => setIsModalSigninOpen(false)} />
@@ -19,9 +20,9 @@ const About = () => {
                 <div className="font-[cambria] md:w-[45%] text-left text-[21px]/[32px] font-[400]">Instead of selling ads or selling your data, we’re supported by a growing community of over a million Medium members who believe in our mission. If you’re new here, start reading. Dive deeper into whatever matters to you. Find a post that helps you learn something new, or reconsider something familiar—and then write your story.</div>
             </div>
             <div className="w-full bg-[#242424] text-white font-[cambria] ">
-                <div className=" flex justify-between  w-full border-t-1 border-[#B3B3B3] text-[32px] md:text-[70px] py-10 text-left cursor-pointer  px-5 md:px-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Start reading <span >→</span></div>
-                <div className="flex justify-between  w-full border-t-1 border-[#B3B3B3]  text-[32px] md:text-[70px] py-10 text-left  cursor-pointer px-5 md:px-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Start writing <span>→</span></div>
-                <div className="flex justify-between  w-full border-t-1 border-[#B3B3B3]  text-[32px] md:text-[70px] py-10 text-left  cursor-pointer px-5 md:px-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Become a member <span>→</span></div>
+                <div onClick={()=>setIsModalSignupOpen(true)} className=" flex justify-between  w-full border-t-1 border-[#B3B3B3] text-[32px] md:text-[70px] py-10 text-left cursor-pointer  px-5 md:px-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Start reading <span >→</span></div>
+                <div onClick={()=>setIsModalSigninOpen(true)} className="flex justify-between  w-full border-t-1 border-[#B3B3B3]  text-[32px] md:text-[70px] py-10 text-left  cursor-pointer px-5 md:px-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Start writing <span>→</span></div>
+                <div onClick={()=>navigate("/membership")} className="flex justify-between  w-full border-t-1 border-[#B3B3B3]  text-[32px] md:text-[70px] py-10 text-left  cursor-pointer px-5 md:px-10 hover:bg-[#FFFFFF] hover:text-black transition-all duration-700">Become a member <span>→</span></div>
             </div>
         </>
     )

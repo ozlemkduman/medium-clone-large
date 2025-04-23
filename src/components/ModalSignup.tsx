@@ -15,7 +15,7 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
         <div className=" fixed inset-0 flex items-center justify-center z-50 min-h-screen ">
             {/* Arka plan (overlay) */}
             <div
-                className="hidden md:block absolute inset-0  bg-white md:opacity-95"
+                className="hidden md:block absolute inset-0  bg-white md:opacity-95 "
                 onClick={onClose}
             ></div>
             {/* Modal içeriği */}
@@ -30,12 +30,12 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                         </path>
                     </svg>
                 </button>
-                <div className="flex flex-col items-center mt-15">
+                <div className="flex flex-col items-center mt-15 ">
                     <div className="flex flex-col items-center w-full">
                         <p className="text-3xl font-[cambria] py-5">Join Large.                        </p>
                         <div className="flex flex-col items-center w-full pt-15 gap-3">
                             <div className="w-5/6 md:w-2/4 border py-2.5 md:px-2 rounded-4xl relative">
-                                <a href="" className="flex justify-center items-center font-light " >
+                                <a href="" className="flex justify-center items-center font-light ps-5 md:ps-0 " >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <g id="google">
                                             <g id="google-vector" fill-rule="evenodd" clip-rule="evenodd">
@@ -67,7 +67,7 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                                 </a>
                             </div>
                             <div className="w-5/6 md:w-2/4 border py-2.5 px-2 rounded-4xl relative">
-                                <a href="" className="flex justify-left md:justify-center items-center  font-light ps-7">
+                                <a href="" className="flex justify-center md:justify-center items-center  font-light ps-5 md:ps-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <g id="email-icon">
                                             <g id="Group 10123" stroke="#242424">
@@ -85,7 +85,7 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                     </div>
                     <div className="flex flex-col items-center mt-13 px-10 md:px-15 text-gray-600">
                         <p className="mb-5 font-light tracking-tight">Already have an account? <a href="" className="text-green-700 font-bold">Sign in</a></p>
-                        <div className="text-center text-sm text-gray-600 md:px-4 text-[14px] md:text-[12px] mt-5 md:mt-20">
+                        <div className="text-center text-sm text-gray-600 md:px-4 text-[14px] md:text-[12px] mt-5 md:mt-10">
                             
                             <p>
                                 Click “Sign in” to agree to Medium’s{" "}

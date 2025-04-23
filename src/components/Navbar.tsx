@@ -40,10 +40,10 @@ const Navbar = () => {
                         </div>
                     </nav>
                     : location.pathname == "/membership" ?
-                        <nav className="fixed z-20 top-0 left-0 border-b-1 bg-[#FFFFFF] h-20  w-full ps-6 pe-10  py-5">
+                        <nav className="fixed z-20 top-0 left-0 border-b-1 bg-[#FFFFFF] h-20  w-full ps-6 md:pe-10  py-5">
                             <div className="flex  justify-between ">
                                 <div className="font-[georgia] text-4xl tracking-tight font-normal cursor-pointer"><NavLink to="/">Large</NavLink></div>
-                                <div className="menu font-sans flex gap-4 items-center font-light text-sm ">
+                                <div className="menu font-sans flex gap-2 md:gap-4 items-center font-light text-sm ">
                                     <div onClick={()=>setIsModalSigninOpen(true)} className="cursor-pointer">
                                         <button className="bg-[#FFFFFF] border-1 border-[#242424]  rounded-3xl text-black px-3.5 py-2.5 cursor-pointer">Sign in</button>
                                     </div>
