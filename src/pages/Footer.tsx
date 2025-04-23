@@ -21,7 +21,7 @@ const Footer = () => {
                         <NavLink to={"/terms"}>Terms</NavLink>
                         <NavLink to={"text"}>Text</NavLink>
                     </div>
-                    <div className="flex md:hidden justify-left ps-6 bg-black md:bg-[#F6F4ED] h-[8%]  py-6 gap-6 text-[13px] font-light text-[#E3E3E3] md:text-gray-600 " >
+                    <div className="flex fixed bottom-0 w-full md:hidden justify-center ps-6 bg-black md:bg-[#F6F4ED] h-[8%]  py-6 gap-6 text-[13px] font-light text-[#E3E3E3] md:text-gray-600 " >
                         <NavLink to={"/about"}>About</NavLink>
                         <NavLink to={"/help"}>Help</NavLink>
                         <NavLink to={"/terms"}>Terms</NavLink>
