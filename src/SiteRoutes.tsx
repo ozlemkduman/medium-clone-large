@@ -5,14 +5,14 @@ import Membership from "./pages/Membership"
 
 const SiteRoutes = () => {
     return (
-        <>
+        <div className="">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/membership" element={<Membership />} />
 
             </Routes>
-        </>
+        </div>
     )
 }
 

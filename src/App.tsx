@@ -6,11 +6,11 @@ import SiteRoutes from './SiteRoutes'
 function App() {
 
   return (
-    
-    <div className='w-screen h-screen  '>
+
+    <div className="w-full min-h-screen  overflow-x-hidden ">
       <Navbar />
-      <SiteRoutes/>
-      <Footer/>
+      <SiteRoutes />
+      <Footer />
     </div>
   )
 }
