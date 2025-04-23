@@ -11,7 +11,7 @@ const Home = () => {
         <>
               <ModalSignin isOpen={isModalSigninOpen} onClose={() => setIsModalSigninOpen(false)}/>
               <ModalSignup isOpen={isModalSignupOpen} onClose={() => setIsModalSignupOpen(false)}/>
-            <div className='flex flex-col items-left md:items-center pt-10 pb-3  md:py-30 bg-[#F6F4ED] md:bg-[url("/mediumm.webp")] bg-size-[auto_600px] bg-no-repeat md:bg-right border-b-1'>
+            <div className='flex flex-col h-screen items-left md:items-center pt-10 pb-3  md:py-30 bg-[#F6F4ED] md:bg-[url("/mediumm.webp")] bg-size-[auto_600px] bg-no-repeat md:bg-right border-b-1'>
                 <p className='text-[76px]/17 md:text-[116px]/25 font-serif md:w-9/12 text-left px-6 md:px-0 pt-27 tracking-tight '>Human <br />
                     stories & ideas
                 </p>

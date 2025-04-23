@@ -27,7 +27,7 @@ const Navbar = () => {
                 </nav>
                 : location.pathname == "/about" ?
                     <nav className="flex bg-[#242424] justify-center border-b-1 h-20  border-[#B3B3B3] w-full md:px-10 py-5">
-                        <div className="flex justify-center md:justify-between w-1/1  gap-3 md:gap-0">
+                        <div className="flex justify-between w-1/1 px-5 md:px-0 gap-3 md:gap-0">
                             <div className="font-[georgia] text-4xl tracking-tight font-normal cursor-pointer text-[#FFFFFF]"><NavLink to="/">Large</NavLink></div>
                             <div className="menu font-sans flex gap-2 md:gap-6 items-center font-light text-sm ">
                                 <div onClick={()=>setIsModalSigninOpen(true)}>

@@ -7,7 +7,7 @@ function App() {
 
   return (
 
-    <div className="w-full min-h-screen  overflow-x-hidden ">
+    <div className="w-full min-h-screen h-screen  overflow-x-hidden ">
       <Navbar />
       <SiteRoutes />
       <Footer />
