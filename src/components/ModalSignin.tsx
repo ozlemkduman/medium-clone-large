@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { signInWithGoogle } from "../utils/googleSignin";
+//import { signInWithGoogle } from "../utils/googleSignin";
 
 interface ModalProps {
     isOpen: boolean;
@@ -12,13 +12,13 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
     if (!isOpen) return null;
 
 
-const handleGoogleSignin = async () => {
-  const user = await signInWithGoogle();
-  if (user) {
-    // Kullanıcı bilgilerini state'e alabilirsin ya da yönlendirme yapabilirsin
-    console.log("Kullanıcı:", user.displayName);
-  }
-};
+// const handleGoogleSignin = async () => {
+//   const user = await signInWithGoogle();
+//   if (user) {
+//     // Kullanıcı bilgilerini state'e alabilirsin ya da yönlendirme yapabilirsin
+//     console.log("Kullanıcı:", user.displayName);
+//   }
+// };
 
     return ReactDOM.createPortal(
         <div className=" fixed inset-0 flex items-center justify-center z-50 min-h-screen ">
