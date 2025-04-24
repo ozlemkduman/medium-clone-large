@@ -12,23 +12,23 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
     if (!isOpen) return null;
 
 
-// const handleGoogleSignin = async () => {
-//   const user = await signInWithGoogle();
-//   if (user) {
-//     // Kullanıcı bilgilerini state'e alabilirsin ya da yönlendirme yapabilirsin
-//     console.log("Kullanıcı:", user.displayName);
-//   }
-// };
+    // const handleGoogleSignin = async () => {
+    //   const user = await signInWithGoogle();
+    //   if (user) {
+    //     // Kullanıcı bilgilerini state'e alabilirsin ya da yönlendirme yapabilirsin
+    //     console.log("Kullanıcı:", user.displayName);
+    //   }
+    // };
 
     return ReactDOM.createPortal(
         <div className=" fixed inset-0 flex items-center justify-center z-50 min-h-screen ">
             {/* Arka plan (overlay) */}
             <div
-                className="hidden md:block absolute inset-0  bg-white md:opacity-95"
+                className="hidden lg:block absolute inset-0  bg-white lg:opacity-95"
                 onClick={onClose}
             ></div>
             {/* Modal içeriği */}
-            <div className="relative bg-white w-full h-full  md:w-2/5 md:h-4/5 p-8  md:rounded shadow-md/20  z-10 ">
+            <div className="relative bg-white w-full h-full  lg:w-2/5 lg:h-4/5 p-8  lg:rounded shadow-md/20  z-10 ">
                 {/* Kapatma butonu */}
                 <button
                     className="absolute top-2 right-2 text-gray-600  cursor-pointer hover:text-black"
@@ -43,7 +43,7 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                     <div className="flex flex-col items-center w-full">
                         <p className="text-3xl font-[cambria] py-5">Welcome back.                        </p>
                         <div className="flex flex-col items-center w-full pt-10 gap-3">
-                            <div className="w-5/6 md:w-2/4 border py-2.5 md:px-2 rounded-4xl relative">
+                            <div className="w-5/6 lg:w-2/4 border py-2.5 lg:px-2 rounded-4xl relative">
                                 <a href="" className="flex justify-center items-center font-light " >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <g id="google">
@@ -60,8 +60,8 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                                     Sign in with Google
                                 </a>
                             </div>
-                            <div className="w-5/6 md:w-2/4 border py-2.5 md:px-2 rounded-4xl relative">
-                            <a href="" className="flex justify-center items-center font-light ps-5 md:ps-0" >
+                            <div className="w-5/6 lg:w-2/4 border py-2.5 lg:px-2 rounded-4xl relative">
+                                <a href="" className="flex justify-center items-center font-light ps-5 lg:ps-0" >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <g id="facebook">
                                             <g id="facebook-vector">
@@ -75,8 +75,8 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                                     Sign in with Facebook
                                 </a>
                             </div>
-                            <div className="w-5/6 md:w-2/4 border py-2.5 md:px-2 rounded-4xl relative">
-                            <a href="" className="flex justify-center items-center font-light " >
+                            <div className="w-5/6 lg:w-2/4 border py-2.5 lg:px-2 rounded-4xl relative">
+                                <a href="" className="flex justify-center items-center font-light " >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" viewBox="0 0 24 24" >
                                         <g id="apple">
                                             <path id="apple-vector" fill="currentColor" d="M18.52 8.23c-.106.086-1.993 1.183-1.993 3.62 0 2.82 2.401 3.818 2.473 3.843-.011.06-.381 1.366-1.266 2.696-.788 1.17-1.612 2.34-2.865 2.34s-1.575-.751-3.022-.751c-1.41 0-1.91.775-3.056.775S6.845 19.67 5.925 18.34C4.86 16.778 4 14.35 4 12.048c0-3.694 2.329-5.653 4.621-5.653 1.218 0 2.233.825 2.998.825.728 0 1.863-.874 3.248-.874.525 0 2.412.05 3.654 1.885m-4.31-3.448c.572-.701.978-1.674.978-2.647 0-.135-.011-.272-.035-.382-.933.036-2.042.64-2.71 1.44-.526.616-1.016 1.589-1.016 2.575 0 .148.024.296.035.344a1.4 1.4 0 0 0 .25.025c.837 0 1.89-.578 2.497-1.355">
@@ -86,8 +86,8 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                                     Sign in with Apple
                                 </a>
                             </div>
-                            <div className="w-5/6 md:w-2/4 border py-2.5 md:px-2 rounded-4xl relative">
-                            <a href="" className="flex justify-center items-center font-light " >
+                            <div className="w-5/6 lg:w-2/4 border py-2.5 lg:px-2 rounded-4xl relative">
+                                <a href="" className="flex justify-center items-center font-light " >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <path fill="#242424" d="M13.346 10.932 18.88 4.5h-1.311l-4.805 5.585L8.926 4.5H4.5l5.803 8.446L4.5 19.69h1.311l5.074-5.898 4.053 5.898h4.426zM11.55 13.02l-.588-.84-4.678-6.693h2.014l3.776 5.4.588.842 4.907 7.02h-2.014z">
                                         </path>
@@ -95,8 +95,8 @@ const ModalSignin: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                                     Sign in with X
                                 </a>
                             </div>
-                            <div className="w-5/6 md:w-2/4 border py-2.5 md:px-2 rounded-4xl relative">
-                            <a href="" className="flex justify-center items-center font-light " >
+                            <div className="w-5/6 lg:w-2/4 border py-2.5 lg:px-2 rounded-4xl relative">
+                                <a href="" className="flex justify-center items-center font-light " >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <g id="email-icon">
                                             <g id="Group 10123" stroke="#242424">
