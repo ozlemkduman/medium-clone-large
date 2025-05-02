@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { useMainContext } from "../contextApi/MainContext";
 
 interface ModalProps {
     isOpen: boolean;
@@ -9,7 +10,7 @@ interface ModalProps {
 
 const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
     if (!isOpen) return null;
-
+    const { handleGoogleSignup} = useMainContext()
 
     return ReactDOM.createPortal(
         <div className=" fixed inset-0 flex items-center justify-center z-50 min-h-screen ">
@@ -19,7 +20,7 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                 onClick={onClose}
             ></div>
             {/* Modal içeriği */}
-            <div className="relative bg-white w-full h-full  lg:w-2/5 lg:h-4/5 p-8 lg:rounded shadow-md/20  z-10">
+            <div className="relative bg-white w-full h-full  lg:w-2/5 lg:max-h-4/5 p-8 lg:rounded shadow-md/20  z-10">
                 {/* Kapatma butonu */}
                 <button
                     className="absolute top-2 right-2 text-gray-600 cursor-pointer hover:text-black"
@@ -30,12 +31,12 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                         </path>
                     </svg>
                 </button>
-                <div className="flex flex-col items-center mt-15 ">
+                <div className="flex flex-col items-center mt-15 h-full ">
                     <div className="flex flex-col items-center w-full">
                         <p className="text-3xl font-[cambria] py-5">Join Large.                        </p>
                         <div className="flex flex-col items-center w-full pt-15 gap-3">
-                            <div className="w-5/6 lg:w-2/4 border py-2.5 lg:px-2 rounded-4xl relative">
-                                <a href="" className="flex justify-center items-center font-light ps-5 lg:ps-0 " >
+                            <div className="w-5/6 lg:w-2/4 border py-2.5 lg:px-2 rounded-4xl relative cursor-pointer">
+                                <button onClick={handleGoogleSignup} className="flex w-full justify-center items-center font-light ps-5 lg:ps-0 cursor-pointer" >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <g id="google">
                                             <g id="google-vector" fill-rule="evenodd" clip-rule="evenodd">
@@ -49,10 +50,10 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                                         </g>
                                     </svg>
                                     Sign in with Google
-                                </a>
+                                </button>
                             </div>
-                            <div className="w-5/6 lg:w-2/4 border py-2.5 px-2 rounded-4xl relative ">
-                                <a href="" className="flex justify-center items-center  font-light ps-5 lg:ps-0">
+                            <div className="w-5/6 lg:w-2/4 border py-2.5 px-2 rounded-4xl relative">
+                                <a href="" className="flex  justify-center items-center  font-light ps-5 lg:ps-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5 " width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <g id="facebook">
                                             <g id="facebook-vector">
@@ -67,7 +68,7 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                                 </a>
                             </div>
                             <div className="w-5/6 lg:w-2/4 border py-2.5 px-2 rounded-4xl relative">
-                                <a href="" className="flex justify-center lg:justify-center items-center  font-light ps-5 lg:ps-0">
+                                <button onClick={handleGoogleSignup} className="flex w-full justify-center lg:justify-center items-center  font-light ps-5 lg:ps-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2.5" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                         <g id="email-icon">
                                             <g id="Group 10123" stroke="#242424">
@@ -79,7 +80,7 @@ const ModalSignup: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
                                         </g>
                                     </svg>
                                     Sign in with email
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>

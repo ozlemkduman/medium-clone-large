@@ -5,26 +5,49 @@ const Navbar = () => {
 
     const { location } = useMainContext()
     const { setIsModalSigninOpen, setIsModalSignupOpen } = useMainContext();
-
+    const { userName } = useMainContext()
 
     return (
         <>
+
             {location.pathname == "/" ?
-                <nav className="flex bg-[#f7f4ed] justify-center border-b-1 h-20  w-screen  lg:px-0 py-5 z-20 top-0 left-0 fixed">
-                    <div className="w-full px-5 lg:px-0  flex justify-between lg:w-9/12 ">
-                        <div className=" font-[georgia]  text-4xl tracking-tight font-normal cursor-pointer"><NavLink to="/">Large</NavLink></div>
-                        <div className="menu font-sans flex gap-6 items-center font-light text-sm ">
-                            <div className="cursor-pointer hidden lg:flex"><NavLink to="/about">Our story</NavLink></div>
-                            <div className="cursor-pointer hidden lg:flex"><NavLink to="/membership">Membership</NavLink></div>
-                            <div onClick={() => setIsModalSigninOpen(true)} className="cursor-pointer hidden lg:flex"><NavLink to="">Write</NavLink></div>
-                            <div onClick={() => setIsModalSigninOpen(true)} className="cursor-pointer hidden lg:flex">Sign In</div>
-                            <div onClick={() => setIsModalSignupOpen(true)} className="" >
-                                <button className="bg-black rounded-3xl text-white px-4 py-3 cursor-pointer">Get started</button>
+                !userName ?
+                    <nav className="flex bg-[#f7f4ed] justify-center border-b-1 h-20  w-screen  lg:px-0 py-5 z-20 top-0 left-0 fixed">
+                        <div className="w-full px-5 lg:px-0  flex justify-between lg:w-9/12 ">
+                            <div className=" font-[georgia]  text-4xl tracking-tight font-normal cursor-pointer"><NavLink to="/">Large</NavLink></div>
+                            <div className="menu font-sans flex gap-6 items-center font-light text-sm ">
+                                <div className="cursor-pointer hidden lg:flex"><NavLink to="/about">Our story</NavLink></div>
+                                <div className="cursor-pointer hidden lg:flex"><NavLink to="/membership">Membership</NavLink></div>
+                                <div onClick={() => setIsModalSigninOpen(true)} className="cursor-pointer hidden lg:flex"><NavLink to="">Write</NavLink></div>
+                                <div onClick={() => setIsModalSigninOpen(true)} className="cursor-pointer hidden lg:flex">Sign In</div>
+                                <div onClick={() => setIsModalSignupOpen(true)} className="" >
+                                    <button className="bg-black rounded-3xl text-white px-4 py-3 cursor-pointer">Get started</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </nav>
+                    :
+                    /* user varsa */
+                    <nav className="flex bg-[#f7f4ed] justify-center border-b-1 h-20  w-screen  lg:px-0 py-5 z-20 top-0 left-0 fixed">
+                        <div className="w-full px-5 lg:px-0  flex justify-between lg:w-9/12 ">
+                            <div className=" font-[georgia]  text-4xl tracking-tight font-normal cursor-pointer"><NavLink to="/">Large</NavLink></div>
+                            <div className="relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd" d="M4.092 11.06a6.95 6.95 0 1 1 13.9 0 6.95 6.95 0 0 1-13.9 0m6.95-8.05a8.05 8.05 0 1 0 5.13 14.26l3.75 3.75a.56.56 0 1 0 .79-.79l-3.73-3.73A8.05 8.05 0 0 0 11.042 3z" clip-rule="evenodd">
+                                    </path>
+                                </svg>
+                                <input type="text" 
+                                
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <div>{userName}</div>
+                            <div>zil</div>
+                            <div>profile</div>
+                        </div>
+                    </nav>
 
-                </nav>
                 : location.pathname == "/about" ?
                     <nav className="flex bg-[#242424] justify-center border-b-1 h-20  border-[#B3B3B3] w-full lg:px-10 py-5">
                         <div className="flex justify-between w-1/1 px-5 lg:px-0 gap-3 lg:gap-0">

@@ -177,7 +177,7 @@ const Membership = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex  lg:flex-row flex-col  w-full min-h-screen  z-10 bg-white  border-b pb-20">
+                <div className="flex  lg:flex-row flex-col   w-full min-h-screen  z-10 bg-white  border-b pb-20">
                     <div className="lg:sticky top-10 w-2/6 h-fit pt-20 text-[48px] lg:text-7xl font-[georgia] tracking-tight text-left ps-8 lg:ps-10  z-10">
                         <p>Why <br /> membership?</p>
                     </div>

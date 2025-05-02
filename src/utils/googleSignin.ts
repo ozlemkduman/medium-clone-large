@@ -1,15 +1,24 @@
 
-import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../services/firebase";
+import {  signInWithPopup } from "firebase/auth";
+import { auth, providerGoogle, } from "../services/firebase";
 
-export const signInWithGoogle = async () => {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    const user = result.user;
-    console.log("Giriş başarılı:", user);
-    return user;
-  } catch (error) {
-    console.error("Google ile giriş hatası:", error);
-    return null;
-  }
+
+const signInWithGoogle = async () => {
+    try {
+        const result = await signInWithPopup(auth, providerGoogle);
+        const user = result.user
+        console.log("google sign yapti");
+        console.log(user.displayName);
+        
+        return user
+    } catch (error: any) {
+
+        console.error("Google ile giriş hatası:", error);
+
+        return null;
+    }
 };
+
+
+
+export { signInWithGoogle }
