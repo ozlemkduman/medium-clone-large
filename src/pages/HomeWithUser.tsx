@@ -1,0 +1,129 @@
+import { useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight, Plus } from "lucide-react"; // veya başka ikon kütüphanesi
+import Card from "../components/Card";
+import RightMenuCard from "../components/RightMenuCard";
+import WritingCard from "../components/WritingCard";
+import TopicsCard from "../components/TopicsCard";
+
+const HomeWithUser = () => {
+    const listRef = useRef<HTMLUListElement>(null);
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+    const [isEnd, setIsEnd] = useState<boolean>(false)
+    const scrollLeft = () => {
+        if (listRef.current) {
+            listRef.current.scrollBy({ left: -100, behavior: "smooth" });
+        }
+    };
+
+    const scrollRight = () => {
+        if (listRef.current) {
+            listRef.current.scrollBy({ left: 100, behavior: "smooth" });
+        }
+    };
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (listRef.current) {
+                setIsScrolled(listRef.current.scrollLeft > 0);
+                const scrollLeft = listRef.current.scrollLeft;
+                const scrollWidth = listRef.current.scrollWidth;
+                const clientWidth = listRef.current.clientWidth;
+
+                // Liste sonuna geldiyse
+                if (scrollLeft + clientWidth >= scrollWidth - 5) { 
+                    setIsEnd(true);
+                } else {
+                    setIsEnd(false);
+                }
+            }
+        };
+
+        const ulElement = listRef.current;
+        if (ulElement) {
+            ulElement.addEventListener("scroll", handleScroll);
+        }
+
+        return () => {
+            if (ulElement) {
+                ulElement.removeEventListener("scroll", handleScroll);
+            }
+        };
+    }, []);
+    return (
+        <>
+            <div className="flex justify-center min-h-screen  pt-20 w-screen  ">
+                <div className="flex  justify-center  w-11/12 h-full   " >
+                    <div className=' flex flex-col items-center w-7/12  h-full   pt-10 '>
+                        <div className="relative flex  w-9/12 justify-center items-center border-b border-gray-200  opacity to-0% from-100% ">
+                            <button
+                                onClick={scrollLeft}
+                                className="absolute left-1 bg-white p-0.5  z-10 cursor-pointer "
+                            >
+                                {isScrolled ? <ChevronLeft className="w-5 h-5 stroke-1 rounded-full" /> : <Plus className="w-5 h-5 rounded-full hover:bg-gray-100 stroke-1" />}
+                            </button>
+                            {
+                                !isEnd &&
+                                <button
+                                    onClick={scrollRight}
+                                    className="absolute right-1 bg-white p-0.5 cursor-pointer z-10 "
+                                >
+                                    <ChevronRight className="w-5 h-5 stroke-1 rounded-full" />
+                                </button>}
+                            {/* left opacity */}
+                            {isScrolled &&
+                                <div className="absolute left-0 top-0 h-full w-35 bg-gradient-to-r from-white to-transparent "></div>
+                            }
+                            {/* Right opacity */}
+                            {!isEnd &&
+                                <div className="flex absolute right-0 top-0 h-full w-35 bg-gradient-to-l from-white to-transparent "></div>
+                            }
+                            <ul ref={listRef} className="flex items-center text-sm text-gray-500 w-full space-x-10 overflow-x-hidden px-10  py-4 ">
+
+                                <li className="shrink-0 ">For You</li>
+                                <li className="shrink-0 ">Following</li>
+                                <li className="shrink-0 ">Featured</li>
+                                <li className="shrink-0 ">Art</li>
+                                <li className="shrink-0 ">Language</li>
+                                <li className="shrink-0 ">Culture</li>
+                                <li className="shrink-0 ">Design</li>
+                                <li className="shrink-0 ">Android Development</li>
+                                <li className="shrink-0 ">Javascript</li>
+                                <li className="shrink-0 ">Software Engineering</li>
+
+                            </ul>
+                        </div>
+                        <div className="flex flex-col items-center  w-full h-full ">
+                            <Card />
+                            <Card />
+                            <Card />
+                            <Card />
+                            <div className="flex flex-col mt-20 mb-30 gap-5">
+                                <p className="font-bold">You're all caught up
+                                </p>
+                                <p>Looking for more writers and publications to follow?
+                                </p>
+                                <p>View recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className=' w-3/12  items-start ps-10 min-h-screen '>
+                        <div className="flex flex-col gap-3 w-full min-h-full items-start  border-s border-gray-200 pt-14 ps-10 ">
+                            <div className="">
+                                <h2 className="">Staff Picks</h2>
+
+                            </div>
+                            <RightMenuCard/>
+                            <RightMenuCard/>
+                            <RightMenuCard/>
+                            <WritingCard/>
+                            <TopicsCard/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default HomeWithUser

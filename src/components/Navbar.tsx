@@ -28,7 +28,7 @@ const Navbar = () => {
                     </nav>
                     :
                     /* user varsa */
-                    <nav className="flex bg-[#f7f4ed] justify-center border-b-1 h-20  w-screen  lg:px-0 py-5 z-20 top-0 left-0 fixed">
+                    <nav className="flex bg-[#f7f4ed] justify-center border-b border-gray-400 h-20  w-screen  lg:px-0 py-5 z-20 top-0 left-0 fixed">
                         <div className="w-full px-5 lg:px-0  flex justify-between lg:w-9/12 ">
                             <div className=" font-[georgia]  text-4xl tracking-tight font-normal cursor-pointer"><NavLink to="/">Large</NavLink></div>
                             <div className="relative">
