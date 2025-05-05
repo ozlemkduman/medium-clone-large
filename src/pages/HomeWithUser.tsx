@@ -53,9 +53,9 @@ const HomeWithUser = () => {
     return (
         <>
             <div className="flex justify-center min-h-screen  pt-20 w-screen  ">
-                <div className="flex  justify-center  w-11/12 h-full   " >
-                    <div className=' flex flex-col items-center w-7/12  h-full   pt-10 '>
-                        <div className="relative flex  w-9/12 justify-center items-center border-b border-gray-200  opacity to-0% from-100% ">
+                <div className="flex  justify-center w-full lg:w-11/12  h-full   " >
+                    <div className=' flex flex-col items-center lg:w-7/12 w-full  h-full   pt-10 '>
+                        <div className="relative flex  lg:w-9/12 w-10/12 justify-center items-center border-b border-gray-200  opacity to-0% from-100% ">
                             <button
                                 onClick={scrollLeft}
                                 className="absolute left-1 bg-white p-0.5  z-10 cursor-pointer "
@@ -98,7 +98,7 @@ const HomeWithUser = () => {
                             <Card />
                             <Card />
                             <Card />
-                            <div className="flex flex-col mt-20 mb-30 gap-5">
+                            <div className="flex flex-col lg:mt-20 mt-10 lg:mb-30 mb-20 px-5 gap-5">
                                 <p className="font-bold">You're all caught up
                                 </p>
                                 <p>Looking for more writers and publications to follow?
@@ -107,7 +107,7 @@ const HomeWithUser = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=' w-3/12  items-start ps-10 min-h-screen '>
+                    <div className='hidden lg:flex lg:w-3/12  items-start ps-10 min-h-screen '>
                         <div className="flex flex-col gap-3 w-full min-h-full items-start  border-s border-gray-200 pt-14 ps-10 ">
                             <div className="">
                                 <h2 className="">Staff Picks</h2>

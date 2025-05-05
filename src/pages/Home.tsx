@@ -20,7 +20,7 @@ const Home = () => {
         <>
             <ModalSignin isOpen={isModalSigninOpen} onClose={() => setIsModalSigninOpen(false)} />
             <ModalSignup isOpen={isModalSignupOpen} onClose={() => setIsModalSignupOpen(false)} />
-            {!userName ?
+            {userName ?
                 <div className='flex flex-col h-screen  items-left lg:items-center pt-10 pb-3  lg:py-20 bg-[#F6F4ED] lg:bg-[url("/mediumm.webp")] bg-size-[auto_600px] bg-no-repeat lg:bg-right '>
                     <p className='text-[76px]/17 lg:text-[116px]/25 font-serif lg:w-9/12 text-left px-6 lg:px-0 pt-27 tracking-tight '>Human <br />
                         stories & ideas
