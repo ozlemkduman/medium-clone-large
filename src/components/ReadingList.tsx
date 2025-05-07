@@ -1,4 +1,3 @@
-import Footer from "../pages/Footer"
 
 const ReadingList = () => {
     return (
