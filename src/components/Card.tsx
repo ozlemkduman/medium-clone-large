@@ -1,19 +1,19 @@
 const Card = () => {
     return (
         <>
-            <div className="flex flex-col  gap-5 lg:mt-20 mt-10  items-start justify-center  h-1/4 lg:w-9/12 w-10/12 lg:pb-20 pb-10 border-b border-gray-200 ">
+            <div className="flex flex-col  gap-5 lg:mt-20 mt-10  items-start justify-center  h-1/4 lg:w-10/12 w-full lg:pb-20 pb-5 border-b border-gray-200 ">
                 <div className="flex gap-2 items-center">
-                    <div className="w-5 h-5">
+                    <div className="w-5 h-5 ">
                         <img src="../public/assets/right-6.png" className="h-full w-full" alt="" />
                     </div>
                     <p className="text-[12px] tracking-wide">In The Medium Blog by Medium Staff</p>
                 </div>
-                <div className="flex justify-between lg:gap-15">
-                    <div className="flex flex-col items-start gap-2 ">
-                        <h2 className="lg:text-2xl text-xl/6 font-bold tracking-tight text-start pe-10">Keep up to date with Medium writers you love even more easily</h2>
+                <div className="flex w-full justify-between lg:gap-15 gap-8">
+                    <div className="flex flex-col items-start gap-2">
+                        <h2 className="lg:text-2xl text-xl/6 font-bold  tracking-tight text-start ">Keep up to date with Medium writers you love even more easily</h2>
                         <p className="text-md/9 lg:tracking-wide  text-start text-neutral-500 font-light">Product update: Follow writers and get email notifications for new stories — in one click</p>
                     </div>
-                    <div className="lg:w-65 lg:h-27 w-50 h-17">
+                    <div className="lg:w-65 lg:h-27 w-75 h-14  ">
                         <img src="../public/assets/right-3.png" className="w-full h-full" alt="" />
                     </div>
                 </div>

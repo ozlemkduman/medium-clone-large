@@ -3,12 +3,14 @@ import { useMainContext } from "../contextApi/MainContext"
 
 const Footer = () => {
 
-    const { location } = useMainContext()
+    const { location,userName } = useMainContext()
 
     return (
         <>
-            {location.pathname == "/" ?
+            {location.pathname == "/"  ?
                 <>
+                    {!userName?
+                    <>
                     <div className="hidden lg:flex w-full fixed bottom-0 border-t justify-left ps-[30%] bg-[#F6F4ED] h-[8%]  py-6 gap-6 text-[13px] font-light text-[#E3E3E3] lg:text-gray-600 " >
                         <NavLink to={"/help"}>Help</NavLink>
                         <NavLink to={"/status"}>Status</NavLink>
@@ -27,8 +29,13 @@ const Footer = () => {
                         <NavLink to={"/terms"}>Terms</NavLink>
                         <NavLink to={"/privacy"}>Privacy</NavLink>
                     </div>
+                    </>
+                    :
+                    <>
+                    </>
+                    }
                 </>
-                :
+                : 
                 <div className=" flex flex-col lg:flex-row lg:justify-between items-center bg-white px-5 py-5 gap-2 lg:gap-6 text-[13px] font-light text-[#242424] " >
                     <div className=" font-serif text-3xl tracking-tight font-inherit cursor-pointer"><NavLink to="/">Large</NavLink></div>
                     <div className="flex gap-3 text-xs underline">

@@ -1,7 +1,7 @@
 const TopicsCard =()=>{
     return(
         <>
-            <div className="flex flex-col items-start gap-5 pt-10">
+            <div className="  flex flex-col items-start gap-5 pt-10">
                 <h2 className="font-bold ">
                     Recommended topics
                 </h2>
