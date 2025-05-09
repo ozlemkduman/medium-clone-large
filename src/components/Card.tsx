@@ -4,7 +4,7 @@ const Card = () => {
             <div className="flex flex-col  gap-5 lg:mt-20 mt-10  items-start justify-center  h-1/4 lg:w-10/12 w-full lg:pb-20 pb-5 border-b border-gray-200 ">
                 <div className="flex gap-2 items-center">
                     <div className="w-5 h-5 ">
-                        <img src="../public/assets/right-6.png" className="h-full w-full" alt="" />
+                        <img src="/right-6.png" className="h-full w-full" alt="" />
                     </div>
                     <p className="text-[12px] tracking-wide">In The Medium Blog by Medium Staff</p>
                 </div>
@@ -14,7 +14,7 @@ const Card = () => {
                         <p className="text-md/9 lg:tracking-wide  text-start text-neutral-500 font-light">Product update: Follow writers and get email notifications for new stories — in one click</p>
                     </div>
                     <div className="lg:w-65 lg:h-27 w-75 h-14  ">
-                        <img src="../public/assets/right-3.png" className="w-full h-full" alt="" />
+                        <img src="/right-3.png" className="w-full h-full" alt="" />
                     </div>
                 </div>
                 <div className="flex justify-between items-center lg:w-8/12 w-full text-gray-500 ">

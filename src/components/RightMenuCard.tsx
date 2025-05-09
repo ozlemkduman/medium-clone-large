@@ -4,7 +4,7 @@ const RightMenuCard = () => {
         <div className="flex flex-col  gap-5 mt-5  items-start justify-center  h-full w-full pb-5  ">
                 <div className="flex gap-2 items-center">
                     <div className="w-5 h-5">
-                        <img src="../public/assets/right-6.png" className="h-full w-full" alt="" />
+                        <img src="/right-6.png" className="h-full w-full" alt="" />
                     </div>
                     <p className="text-[12px] tracking-wide">In The Medium Blog by Medium Staff</p>
                 </div>

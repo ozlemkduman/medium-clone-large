@@ -7,7 +7,7 @@ const WhoToFollowCard = () => {
                 </h2>
                 <div className="flex gap-3 w-full">
                     <div className="w-14 h-10 rounded-full">
-                        <img src="./public/assets/right-6.png" className="w-full h-full rounded-full" alt="" />
+                        <img src="/right-6.png" className="w-full h-full rounded-full" alt="" />
                     </div>
                     <div className="flex flex-col items-start justify-center gap-2 pt-1 pe-2">
                         <p className="font-bold text-start">Daniel Scott</p>

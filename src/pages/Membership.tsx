@@ -9,14 +9,14 @@ const Membership = () => {
 
     // Fotoğraf URL'leri (7 adet)
     const images = [
-        "/assets/right-1.png",
-        "/assets/right-2.png",
-        "/assets/right-3.png",
-        "/assets/right-4.png",
-        "/assets/right-5.png",
-        "/assets/right-6.png",
-        "/assets/right-7.png",
-        "/assets/right-8.png",
+        "/right-1.png",
+        "/right-2.png",
+        "/right-3.png",
+        "/right-4.png",
+        "/right-5.png",
+        "/right-6.png",
+        "/right-7.png",
+        "/right-8.png",
 
     ];
 
